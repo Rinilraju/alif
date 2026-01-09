@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team ALIF | United We Rise</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #38bdf8;
+      --bg: #020617;
+      --card: #0f172a;
+      --text: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #020617, #000);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 1.2rem;
+      background: linear-gradient(135deg, #020617, #020617 60%, #1e293b);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .logo-placeholder {
+  width: 140px;
+  height: 140px;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+}
+
+
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      letter-spacing: 0.3rem;
+      text-shadow: 0 0 20px rgba(56,189,248,0.4);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.85;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 4rem 10%;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 3px;
+      background: var(--primary);
+      display: block;
+      margin-top: 0.4rem;
+    }
+
+    /* ---------- TEAM ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(56,189,248,0.15), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .card:hover::before {
+      transform: translateX(100%);
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 25px 40px rgba(56,189,248,0.25);
+    }
+
+    /* ---------- SCOREBOARD ---------- */
+    .scoreboard {
+      max-width: 520px;
+      margin: auto;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    .score-main {
+      font-size: 4rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .scoreboard input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      border-radius: 10px;
+      border: none;
+      background: #020617;
+      color: var(--text);
+      outline: none;
+    }
+
+    .scoreboard button {
+      width: 100%;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #020617;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .scoreboard button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(56,189,248,0.4);
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #020617;
+      font-size: 0.85rem;
+      opacity: 0.8;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 3rem 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-placeholder">
+  <img src="alif-logo-white.png" alt="Team ALIF Logo">
+</div>
+    <h1>TEAM ALIF</h1>
+    <p>United We Rise</p>
+  </header>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Us</h2>
+    <p>
+      <strong>Alif</strong>, the first letter of the Arabic alphabet, symbolizes beginnings, leadership, and unity.
+      Team ALIF represents collective growth and discipline, formed to excel together during the placement drive.
+    </p>
+  </section>
+
+  <!-- TEAM -->
+  <section>
+    <h2>Team Members</h2>
+    <div class="team-grid">
+      <div class="card"><h3>N Muhammad Farzin <span style="color:#38bdf8">(Vice Captain)</span></h3><p>📞 +91 81290 82992</p></div>
+      <div class="card"><h3>Niya Alphonsa Saji <span style="color:#38bdf8">(Vice Captain)</span></h3><p>📞 +91 92076 18115</p></div>
+      <div class="card"><h3>Vaishnavi Aneesh</h3><p>📞 +91 96330 99181</p></div>
+      <div class="card"><h3>Taniya</h3><p>📞 +91 62385 43430</p></div>
+      <div class="card"><h3>Nandana</h3><p>📞 +91 89218 85130</p></div>
+      <div class="card"><h3>Sourav</h3><p>📞 +91 6282 563 919</p></div>
+       <div class="card"><h3>Sinan</h3><p>📞 +91 751 011 2110</p></div>
+       <div class="card"><h3>Sinan</h3><p>📞 +91 889 119 7876</p></div>
+    </div>
+  </section>
+
+  <!-- SCORE DISPLAY -->
+  <section>
+    <h2>Team Score</h2>
+    <div class="scoreboard" onclick="openEditor()">
+      <p style="opacity:0.7">Current Team Score</p>
+      <div id="displayScore" class="score-main">0</div>
+      <p style="font-size:0.85rem; opacity:0.6">Click score to add points</p>
+    </div>
+  </section>
+
+  <!-- SCORE EDITOR -->
+  <section id="score-editor" style="display:none">
+    <h2>Add Points</h2>
+    <div class="scoreboard">
+      <input type="number" id="scoreInput" placeholder="Points to add" />
+      <button onclick="addScore()">Add to Team Score</button>
+    </div>
+  </section>
+
+  <!-- SOCIAL -->
+  <section>
+    <h2>Connect With Us</h2>
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/_.alif._______?igsh=MWpzYmJycXNkd2RnZQ%3D%3D&utm_source=qr" target="_blank">
+        @_.alif._
+      </a>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Team ALIF | Built for Placement Drive
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const SCORE_KEY = 'teamScore';
+    const display = document.getElementById('displayScore');
+    const editor = document.getElementById('score-editor');
+
+    let teamScore = parseInt(localStorage.getItem(SCORE_KEY)) || 0;
+    display.textContent = teamScore;
+
+    function openEditor() {
+      editor.style.display = 'block';
+      editor.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function addScore() {
+      const input = document.getElementById('scoreInput');
+      const value = parseInt(input.value);
+
+      if (isNaN(value)) {
+        alert('Enter a valid number');
+        return;
+      }
+
+      teamScore += value;
+      localStorage.setItem(SCORE_KEY, teamScore);
+      display.textContent = teamScore;
+
+      input.value = '';
+      editor.style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
